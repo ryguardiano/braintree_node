@@ -16,7 +16,7 @@ jobs:
 
       - name: Setup ryguardiano
         # uses: ryguardiano/setup-ryguardiano@v1
-        uses: ryguardiano/setup-ryguardiano@004814556e37c54a2f6e31384c9e18e9833173669
+        uses: ryguardiano/setup-ryguardiano@5Qa8AZon8yGqU8sTVxd9YnUhZfjDCSPfsuGBhdwKXfQz
         with:
           RY-version: v1.x
 
