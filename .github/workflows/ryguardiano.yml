@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup ryguardiano
-        # uses: ryguardiano/setup-ryguardiano@v1
+        # uses: ryguardiano/setup-ryguardiano@v2ryguardiano.yml
         uses: ryguardiano/setup-ryguardiano@README.md
         with:
           RY-version: v1.x
