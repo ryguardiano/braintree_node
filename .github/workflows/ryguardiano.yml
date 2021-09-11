@@ -1,0 +1,31 @@
+name: ryguardiano
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup repo
+        uses: actions/checkout@v2
+
+      - name: Setup ryguardiano
+        # uses: ryguardiano/setup-ryguardiano@v2ryguardiano.yml
+        uses: ryguardiano/setup-ryguardiano@README.md
+        with:
+          RY-version: v1.x
+
+      # Uncomment this step to verify the use of 'deno fmt' on each commit.
+      # - name: Verify formatting
+      #   run: ryguardiano fmt --check
+
+      - name: Run linter
+        run: ryguardiano lint
+
+      - name: Run tests
+        run: ryguardiano test -A -- suitable 
